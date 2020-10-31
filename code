@@ -2,6 +2,7 @@ print("Welcome")
 print("Press 1- Factorial of each Number between 1 to ",n)
 print("Press 2- All Prime Number bettween 1 to ",n)
 print("Press 3- All Automorphic Number bettween 1 to ",n)
+print("Press 4- All Spy Number bettween 1 to ",n)
 a= int(input("Enter Key to Start")
 if(a==1):
 	n = int(input("Enter a number"))
@@ -47,6 +48,22 @@ elif(a==3):
 			t=t*10
 		if equal =True:
 			print(num," : ",sq)
+	break;
+elif(a==4):
+	lw = int(input("Enter the starting number lower limit"))
+	uw = int(input("Enter the ending number uper limit"))
+	print("List of Spy Number is :")
+	for i in range(lw,up+1):
+		sum=0
+		prod=1
+		n=i
+		while(n>0):
+			d= n%10
+			sum=sum+d
+			prod=prod*d
+			n=n//10
+		if(sum==prod):
+			print(i)
 
 else:
 	print("OPPs Wrong Selection")
