@@ -1,0 +1,33 @@
+print("Welcome")
+print("Press 1- Factorial of each Number between 1 to ",n)
+print("Press 2- All Prime Number bettween 1 to ",n)
+a= int(input("Enter Key to Start")
+if(a==1):
+	n = int(input("Enter a number"))
+	print("Number : Factorial")
+
+	for i in range(1,n+1):
+		cn=i
+		fact=1
+		for j in range(1,cn+1):
+			fact=fact*j
+	print(cn," : ",fact)
+	break;
+
+elif(a==2):
+	count=0
+	n = int(input("Enter a number"))
+	print("List of Prime Number is :")
+	for i in range(1,n+1):
+		cn=1
+		count=0
+		for j in range(1,cn+1):
+			if cn%j==0:
+				count+=1
+		if (count==2):
+			print(cn)
+	break;
+
+else:
+	print("OPPs Wrong Selection")
+	break;
