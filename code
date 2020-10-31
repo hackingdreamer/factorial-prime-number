@@ -1,6 +1,7 @@
 print("Welcome")
 print("Press 1- Factorial of each Number between 1 to ",n)
 print("Press 2- All Prime Number bettween 1 to ",n)
+print("Press 3- All Automorphic Number bettween 1 to ",n)
 a= int(input("Enter Key to Start")
 if(a==1):
 	n = int(input("Enter a number"))
@@ -27,6 +28,25 @@ elif(a==2):
 		if (count==2):
 			print(cn)
 	break;
+
+elif(a==3):
+	n = int(input("Enter a number"))
+	print("List of Automorphic Number is :")
+	for i in range(1,n+1):
+		cn=i
+		num=i
+		sq=cn*cn
+		t=10
+		equal=False
+		while(cn>0):
+			r=sq%t
+			if(num==r):
+				equal=True
+				break;
+			cn=cn//10
+			t=t*10
+		if equal =True:
+			print(num," : ",sq)
 
 else:
 	print("OPPs Wrong Selection")
